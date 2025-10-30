@@ -1,0 +1,102 @@
+<html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kartu Fakta Menarik — Teknologi</title>
+  <link rel="stylesheet" href="A.css">
+</head>
+<style>
+
+</style>
+<body>
+
+
+  <div class="card-fakta">
+    <img id="factImage" src="o.jpg" />
+    <div class="content">
+      <h2>Fakta Menarik tentang Biola</h2>
+      <p class="subtitle">Tahukah kamu fakta-fakta unik ini?</p>
+
+
+      <ul class="facts-list" id="factList">
+        <li>Biola pertama kali muncul di Italia pada abad ke-16, sekitar tahun 1550.</li>
+        <li>Biola terdiri dari 4 senar yang terbuat dari bahan sintetis atau usus hewan, dan dimainkan dengan menggunakan busur.</li>
+        <li>Instrumen ini sering digunakan dalam berbagai genre musik, termasuk klasik, jazz, dan musik folk.</li>
+        <li>Stradivarius adalah merek biola yang paling terkenal dan dianggap sebagai biola terbaik yang pernah ada, dibuat oleh Antonius Stradivari pada abad ke-17 dan ke-18.</li>
+    </ul>
+    
+
+      <button class="btn-next" id="nextFact">🔁 Fakta Selanjutnya</button>
+
+
+      <div class="card-footer">Yehezkiel Kurniawan Soru</div>
+    </div>
+  </div>
+
+
+  <script>
+    const factData = [
+      {
+        image: "i.jpg",
+        facts: [
+          "Busur biola terbuat dari setidaknya 150 helai rambut. Helaian rambut ini bisa berupa nilon, bulu kuda, dan berbagai jenis bahan lainnya.",
+          "Istilah sehari-hari yang digunakan untuk menyebut biola adalah fiddle. Istilah ini paling sering digunakan ketika biola disetel secara khusus dalam gaya folk.",
+          "Senar biola pertama kali dibuat menggunakan usus domba yang dikeringkan, diregangkan, dan dipilin. Beberapa bahan lain termasuk baja pilin, baja padat, dan baja berlapis."
+         
+        ]
+      },
+      {
+        image: "k.jpg",
+        facts: [
+          "Saat biola dimainkan, busur ditarik tegak lurus. Hal ini dilakukan dengan tangan kanan untuk menghasilkan suara.",
+          "Biola tersedia dalam berbagai bentuk dan ukuran untuk menyesuaikan ukuran dan tinggi badan setiap pemain. Faktanya, ukuran biola terkecil adalah 1/64. Ukuran ini cocok untuk anak-anak berusia 2-3 tahun. Ini memungkinkan mereka untuk mulai belajar biola ketika mereka baru mulai belajar berjalan.",
+          "Biola terbesar di dunia dibuat oleh 15 pembuat biola yang berdedikasi. Panjangnya 4,27 meter dan lebarnya 5,22 meter."
+        ]
+      },
+      {
+        image: "n.jpg",
+        facts: [
+          "Biola termahal di dunia dibuat oleh Giuseppe Guarneri pada tahun 1741. Biola ini bernilai $18 juta.",
+          "Dibandingkan dengan alat musik lainnya, biola sangat rumit. Pembuatan biola biasanya membutuhkan lebih dari 70 potong kayu.",
+          "Jika senar biasa tidak tersedia, Anda bisa menggunakan potongan-potongan rambut yang direkatkan. Ini akan menghasilkan suara yang sangat mengesankan. Jadi, lain kali Anda mematahkan biola Anda, Anda tahu apa yang harus dilakukan."
+        ]
+      },
+      {
+        image: "p.jpg",
+        facts: [
+          "Dalam keluarga biola, biola adalah instrumen terkecil. Biola juga menghasilkan nada tertinggi dibandingkan keempat jenis instrumen lainnya.",
+          "Meskipun biola merupakan instrumen populer untuk instrumen klasik, biola juga telah digunakan dalam musik yang lebih umum seperti musik kamar, konser, orkestra, dan lain-lain.",
+          "Pemain biola umumnya membakar 170 kalori per jam saat memainkan alat musiknya, yang jumlahnya hampir sama dengan kalori yang dibakar saat berjalan kaki perlahan selama satu jam."
+        ]
+      }
+    ];
+
+
+    const factList = document.getElementById("factList");
+    const factImage = document.getElementById("factImage");
+    const nextBtn = document.getElementById("nextFact");
+
+
+    nextBtn.addEventListener("click", () => {
+      factList.classList.add("fade-out");
+      setTimeout(() => {
+        const randomFact = factData[Math.floor(Math.random() * factData.length)];
+        factImage.style.opacity = 0;
+
+
+        setTimeout(() => {
+          factImage.src = randomFact.image;
+          factImage.style.opacity = 1;
+        }, 400);
+
+
+        factList.innerHTML = randomFact.facts.map(f => `<li>${f}</li>`).join("");
+        factList.classList.remove("fade-out");
+      }, 500);
+    });
+  </script>
+
+
+</body>
+</html>
