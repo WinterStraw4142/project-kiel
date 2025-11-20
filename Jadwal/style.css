@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 6px 8px;
+    font-weight: bold;
+}
+
+th {
+    font-weight: bold;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    padding: 4px;
+}
+
+.devotion {
+    background-color: #00aaff;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+}
+
+.istirahat {
+    background-color: #ffff33;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+}
+
+.olahraga {
+    background-color: orange;
+    font-weight: bold;
+}
+
+.kebaktian {
+    background-color: violet;
+    font-weight: bold;
+    color: black;
+}
+
+.waktu-col {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+.no-col {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+.pramuka {
+    background-color: #A0522D; 
+    font-weight: bold;
+}
