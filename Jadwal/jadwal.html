@@ -1,240 +1,140 @@
-<html>
-   <head>
-        <title>Jadwal Pelajaran Kelas XI</title>
-        <style>
-            body {
-                background-color: #f3f4f6; /* Warna background halaman */
-                font-family: Arial, sans-serif; /* Menggunakan font yang lebih bersih */
-                margin: 0;
-                padding: 0;
-            }
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <title>Jadwal Pelajaran Kelas XI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <table>
+        <tr>Mata Pelajaran</tr>
+        <tr>
+            <th class="no-col">No.</th>
+            <th class="waktu-col">WAKTU</th>
+            <th>SENIN</th>
+            <th>SELASA</th>
+            <th>RABU</th>
+            <th>KAMIS</th>
+            <th>JUMAT</th>
+        </tr>
 
-            table, td {
-                border: 2px solid black;
-                border-collapse: collapse;
-            }
+        <tr>
+            <td></td>
+            <td class="waktu-col">06.40 - 07.00</td>
+            <td colspan="5" class="devotion">D E V O T I O N - L I T E R A S I</td>
+        </tr>
 
-            td {
-                padding: 8px 5px;
-                text-align: center;
-            }
+        <tr>
+            <td class="no-col">1</td>
+            <td class="waktu-col">07.00 - 07.45</td>
+            <td>MAT / GEO / BIO</td>
+            <td>MATEMATIKA</td>
+            <td>MATEMATIKA</td>
+            <td>MAT / GEO / BIO</td>
+            <td>AGAMA</td>
+        </tr>
 
-            tr:nth-child(1) td {
-                background-color: #003366;
-                color: white;
-                font-weight: bold;
-            }
+        <tr>
+            <td class="no-col">2</td>
+            <td class="waktu-col">07.45 - 08.30</td>
+            <td>MAT / GEO / BIO</td>
+            <td>MATEMATIKA</td>
+            <td>MATEMATIKA</td>
+            <td class="olahraga">OLAHRAGA</td>
+            <td>AGAMA</td>
+        </tr>
 
-            tr:nth-child(2) td {
-                background-color: #0066cc;
-                color: white;
-                font-weight: bold;
-            }
+        <tr>
+            <td class="no-col">3</td>
+            <td class="waktu-col">08.30 - 09.15</td>
+            <td>MANDARIN</td>
+            <td>INDONESIA</td>
+            <td>MAT / GEO / BIO</td>
+            <td class="olahraga">OLAHRAGA</td>
+            <td>PPKn</td>
+        </tr>
 
-            .no {
-                background-color: #d9f7be;
-            }
+        <tr>
+            <td class="no-col">4</td>
+            <td class="waktu-col">09.15 - 10.00</td>
+            <td>MANDARIN</td>
+            <td>INDONESIA</td>
+            <td>MAT / GEO / BIO</td>
+            <td class="kebaktian">KEBAKTIAN</td>
+            <td>PPKn</td>
+        </tr>
 
-            .waktu {
-                background-color: #fff2cc;
-            }
+        <tr>
+            <td></td>
+            <td class="waktu-col">10.00 - 10.15</td>
+            <td colspan="5" class="istirahat">I S T I R A H A T</td>
+        </tr>
 
-            .senin {
-                background-color: #ffcccb;
-            }
+        <tr>
+            <td class="no-col">5</td>
+            <td class="waktu-col">10.15 - 11.00</td>
+            <td>EKO / KIM</td>
+            <td>SEJARAH</td>
+            <td>EKO / KIM</td>
+            <td class="kebaktian">KEBAKTIAN</td>
+            <td>FIS / SOS</td>
+        </tr>
 
-            .selasa {
-                background-color: #d1c4e9;
-            }
+        <tr>
+            <td class="no-col">6</td>
+            <td class="waktu-col">11.00 - 11.45</td>
+            <td>ING ADV</td>
+            <td>SEJARAH</td>
+            <td>EKO / KIM</td>
+            <td>TIK</td>
+            <td>FIS / SOS</td>
+        </tr>
 
-            .rabu {
-                background-color: #c8e6c9;
-            }
+        <tr>
+            <td class="no-col">7</td>
+            <td class="waktu-col">11.45 - 12.30</td>
+            <td>INDONESIA</td>
+            <td>ING ADV</td>
+            <td>INGGRIS</td>
+            <td>TIK</td>
+            <td>ING ADV</td>
+        </tr>
 
-            .kamis {
-                background-color: #fff9c4;
-            }
+        <tr>
+            <td></td>
+            <td class="waktu-col">12.30 - 13.00</td>
+            <td colspan="5" class="istirahat">I S T I R A H A T</td>
+        </tr>
 
-            .jumat {
-                background-color: #ffeb3b;
-            }
+        <tr>
+            <td class="no-col">8</td>
+            <td class="waktu-col">13.00 - 13.45</td>
+            <td>FIS / SOS</td>
+            <td>ING ADV</td>
+            <td>INGGRIS</td>
+            <td>GB / MUSIK</td>
+            <td>EKO / KIM</td>
+        </tr>
 
-            td {
-                background-color: #f1f8e9;
-            }
+        <tr>
+            <td class="no-col">9</td>
+            <td class="waktu-col">13.45 - 14.30</td>
+            <td>FIS / SOS</td>
+            <td>FIS / SOS</td>
+            <td class="pramuka">PRAMUKA</td>
+            <td>GB / MUSIK</td>
+            <td>EKO / KIM</td>
+        </tr>
 
-            .senin-col {
-                background-color: #ffcccb;
-            }
-
-            .selasa-col {
-                background-color: #d1c4e9;
-            }
-
-            .rabu-col {
-                background-color: #c8e6c9;
-            }
-
-            .kamis-col {
-                background-color: #fff9c4;
-            }
-
-            .jumat-col {
-                background-color: #ffeb3b;
-            }
-
-            .istirahat {
-                background-color: #ffebee;
-                color: black;
-                font-weight: bold;
-            }
-
-            h2 {
-                color: #2c3e50;
-                padding-top: 30px;
-                margin-bottom: 20px;
-            }
-
-            /* Styling untuk tabel yang lebih rapi dan terpusat */
-            table {
-                margin: 20px auto;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                background-color: #ffffff; /* Background putih pada tabel */
-            }
-
-            .container {
-                width: 90%;
-                margin: 0 auto;
-                padding-bottom: 50px;
-            }
-        </style>
-    </head>
-
-    <body>
-    <div class="container">
-        <center>
-            <h2>Jadwal Pelajaran Kelas XI 2025/2026</h2>
-            <table>
-                <tr>
-                    <td colspan="7" class="no">Kelas XI</td>
-                </tr>
-                <tr>
-                    <td class="no">No</td>
-                    <td class="waktu">Waktu</td>
-                    <td class="senin">Senin</td>
-                    <td class="selasa">Selasa</td>
-                    <td class="rabu">Rabu</td>
-                    <td class="kamis">Kamis</td>
-                    <td class="jumat">Jumat</td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td class="waktu">06.40-07.00</td>
-                    <td class="senin">Upacara</td>
-                    <td class="selasa" colspan="4">Devotion-Literasi</td>
-                </tr>
-                <tr>
-                    <td class="no">1</td>
-                    <td class="waktu">07.00-07.45</td>
-                    <td class="senin">MAT/GEO/BIO</td>
-                    <td class="selasa">MATEMATIKA</td>
-                    <td class="rabu">MATEMATIKA</td>
-                    <td class="kamis">INDONESIA</td>
-                    <td class="jumat">AGAMA</td>
-                </tr>
-                <tr>
-                    <td class="no">2</td>
-                    <td class="waktu">07.45-08.30</td>
-                    <td class="senin">MAT/GEO/BIO</td>
-                    <td class="selasa">MATEMATIKA</td>
-                    <td class="rabu">MATEMATIKA</td>
-                    <td class="kamis">OLAHRAGA</td>
-                    <td class="jumat">AGAMA</td>
-                </tr>
-                <tr>
-                    <td class="no">3</td>
-                    <td class="waktu">08.30-09.15</td>
-                    <td class="senin">MANDARIN</td>
-                    <td class="selasa">INDONESIA</td>
-                    <td class="rabu">MAT/GEO/BIO</td>
-                    <td class="kamis">OLAHRAGA</td>
-                    <td class="jumat">PPKN</td>
-                </tr>
-                <tr>
-                    <td class="no">4</td>
-                    <td class="waktu">09.15-10.00</td>
-                    <td class="senin">MANDARIN</td>
-                    <td class="selasa">INDONESIA</td>
-                    <td class="rabu">MAT/GEO/BIO</td>
-                    <td class="kamis">IBADAH</td>
-                    <td class="jumat">PPKN</td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td class="waktu">10.00-10.15</td>
-                    <td colspan="5" class="istirahat">ISTIRAHAT</td>
-                </tr>
-                <tr>
-                    <td class="no">5</td>
-                    <td class="waktu">10.15-11.00</td>
-                    <td class="senin">EKO/KIM</td>
-                    <td class="selasa">SEJARAH</td>
-                    <td class="rabu">EKO/KIM</td>
-                    <td class="kamis">IBADAH</td>
-                    <td class="jumat">FIS/SOS</td>
-                </tr>
-                <tr>
-                    <td class="no">6</td>
-                    <td class="waktu">11.00-11.45</td>
-                    <td class="senin">ING ADV</td>
-                    <td class="selasa">SEJARAH</td>
-                    <td class="rabu">EKO/KIM</td>
-                    <td class="kamis">TIK</td>
-                    <td class="jumat">FIS/SOS</td>
-                </tr>
-                <tr>
-                    <td class="no">7</td>
-                    <td class="waktu">11.45-12.30</td>
-                    <td class="senin">INDONESIA</td>
-                    <td class="selasa">ING ADV</td>
-                    <td class="rabu">INGGRIS</td>
-                    <td class="kamis">TIK</td>
-                    <td class="jumat">ING ADV</td>
-                </tr>
-                <tr>
-                    <td class="no"></td>
-                    <td class="waktu">12.30-13.00</td>
-                    <td colspan="5" class="istirahat">ISTIRAHAT</td>
-                </tr>
-                <tr>
-                    <td class="no">8</td>
-                    <td class="waktu">13.00-13.45</td>
-                    <td class="senin">FIS/SOS</td>
-                    <td class="selasa">ING ADV</td>
-                    <td class="rabu">INGGRIS</td>
-                    <td class="kamis">GB/MUSIK</td>
-                    <td class="jumat">EKO/KIM</td>
-                </tr>
-                <tr>
-                    <td class="no">9</td>
-                    <td class="waktu">13.45-14.30</td>
-                    <td class="senin">FIS/SOS</td>
-                    <td class="selasa">FIS/SOS</td>
-                    <td class="rabu">PRAMUKA</td>
-                    <td class="kamis">GB/MUSIK</td>
-                    <td class="jumat">EKO/KIM</td>
-                </tr>
-                <tr>
-                    <td class="no">10</td>
-                    <td class="waktu">14.30-15.15</td>
-                    <td></td>
-                    <td></td>
-                    <td class="rabu">PRAMUKA</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
-        </center>
-    </div>
-    </body>
+        <tr>
+            <td class="no-col">9</td>
+            <td class="waktu-col">14.30 - 15.15</td>
+            <td></td>
+            <td></td>
+            <td class="pramuka">PRAMUKA</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
 </html>
